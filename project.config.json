@@ -6,11 +6,16 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"appid": "wx3622bdff4613d2f7",
 	"projectname": "testDemo",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

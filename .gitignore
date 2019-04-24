@@ -1,0 +1,5 @@
+.idea/
+*.iml
+
+# Log files
+npm-debug.log

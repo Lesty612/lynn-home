@@ -1,0 +1,26 @@
+{
+  "name": "lynn-home",
+  "version": "1.0.0",
+  "description": "wechat mini program, make your home management easier",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lesty612/lynn-home.git"
+  },
+  "keywords": [
+    "miniprogram",
+    "manage system"
+  ],
+  "author": "Lesty<lesty612@163.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lesty612/lynn-home/issues"
+  },
+  "homepage": "https://github.com/Lesty612/lynn-home#readme",
+  "dependencies": {
+    "vant-weapp": "^0.5.10"
+  }
+}
