@@ -1,0 +1,7 @@
+.custom-tab-bar__item {
+    border-top: 1rpx solid #eee;
+}
+
+.custom-tab-bar__item__active {
+    background: #f4f8ff;
+}

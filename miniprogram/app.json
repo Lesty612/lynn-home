@@ -27,6 +27,10 @@
         "text": "管理"
       },
       {
+        "pagePath": "pages/manage/manage",
+        "text": "图表"
+      },
+      {
         "pagePath": "pages/my/my",
         "text": "我的"
       }

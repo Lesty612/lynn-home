@@ -1,12 +1,18 @@
 Component({
     data: {
-        active: 0
+        curTabId: 'manage',
+        // icon图表大小
+        iconSize: '25px'
     },
     attached() {
     },
     methods: {
-        handleChange(e) {
-
+        // 处理点击tab
+        handleTapTab(e) {
+            const curId = e.currentTarget.dataset.id;
+            this.setData({
+                curTabId: curId
+            });
         }
     }
 })
