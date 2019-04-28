@@ -1,5 +1,11 @@
+# Setting files
 .idea/
 *.iml
+
+# lib files
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+
 
 # Log files
 npm-debug.log
