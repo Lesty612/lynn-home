@@ -3,5 +3,5 @@
 }
 
 .custom-tab-bar__item__active {
-    background: #f4f8ff;
+    background: #f8f8f8
 }

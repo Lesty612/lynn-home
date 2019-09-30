@@ -12,8 +12,8 @@
 		"checkInvalidKey": true
 	},
 	"appid": "wx3622bdff4613d2f7",
-	"projectname": "testDemo",
-	"libVersion": "2.6.5",
+	"projectname": "lynn-home",
+	"libVersion": "2.6.6",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

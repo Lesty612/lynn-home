@@ -1,5 +1,11 @@
 Page({
+    onShow() {
+        // 设置tabbar选中manage
+        this.getTabBar().setData({
+            curTabId: 'manage'
+        });
+    },
     data: {
-      title: '管理页面'
+      title: '衣物展示'
     }
-})
+});
