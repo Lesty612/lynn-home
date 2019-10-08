@@ -1,0 +1,8 @@
+<view>
+    <search-panel class="main__search-box"></search-panel>
+
+    <view class="main__content">
+        <filter-panel></filter-panel>
+        <item-list></item-list>
+    </view>
+</view>

@@ -4,7 +4,7 @@ Component({
         styleIsolation: 'apply-shared'
     },
     data: {
-        curTabId: 'manage',
+        curTabId: 'main',
         // icon图表大小
         iconSize: '25px'
     },

@@ -10,3 +10,8 @@
 .custom-tab-bar__item .van-icon {
     font-size: 23px;
 }
+
+/*主页搜索框修改*/
+.main__search-box .van-search {
+    padding: 10px;
+}

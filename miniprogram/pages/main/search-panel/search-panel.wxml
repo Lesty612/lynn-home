@@ -1,0 +1,4 @@
+<!--pages/order-list/search-panel/search-panel.wxml-->
+<view>
+    <van-search placeholder="请输入搜索关键词" />
+</view>

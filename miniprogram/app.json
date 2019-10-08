@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/main/main",
     "pages/manage/manage",
     "pages/my/my",
     "pages/userConsole/userConsole",
@@ -23,8 +24,8 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/manage/manage",
-        "text": "管理"
+        "pagePath": "pages/main/main",
+        "text": "首页"
       },
       {
         "pagePath": "pages/manage/manage",
