@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "van-sticky": "vant-weapp/sticky",
     "search-panel": "./search-panel/search-panel",
     "filter-panel": "./filter-panel/filter-panel",
     "item-list": "./item-list/item-list"

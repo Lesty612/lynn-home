@@ -1,1 +1,4 @@
 /* pages/main/item-list/item-list.wxss */
+.item-list__item {
+    margin-bottom: 10px;
+}

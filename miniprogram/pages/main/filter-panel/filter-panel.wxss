@@ -1,1 +1,18 @@
 /* pages/order-list/filter-panel/filter-panel.wxss */
+.filter-panel__root {
+    min-width: 300px;
+
+    background: #fff;
+}
+
+.filter-panel__tag-list {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+
+    line-height: 40px;
+}
+
+.filter-panel__sort-tag__active {
+    color: #409EFF;
+}

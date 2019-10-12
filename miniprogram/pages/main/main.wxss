@@ -1,1 +1,4 @@
 /* miniprogram/pages/order-list/order-list.wxss */
+.main__content {
+    padding: 0 10px;
+}

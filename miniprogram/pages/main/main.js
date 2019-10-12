@@ -17,6 +17,9 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        // 处理筛选条件变化
+        handleFilterConditionChange(event) {
+            console.log('handleFilterConditionChange', event);
+        }
     }
 })

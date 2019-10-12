@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col"
+  }
 }

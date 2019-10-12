@@ -1,8 +1,10 @@
-<view>
+<view class="app__content">
     <search-panel class="main__search-box"></search-panel>
 
     <view class="main__content">
-        <filter-panel></filter-panel>
+        <van-sticky>
+            <filter-panel bind:condition-change="handleFilterConditionChange"></filter-panel>
+        </van-sticky>
         <item-list></item-list>
     </view>
 </view>

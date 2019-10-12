@@ -1,9 +1,6 @@
 /**app.wxss**/
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+.app__content {
+    padding-bottom: 50px;
 }
 
 /*自定义tabbar图标大小*/
@@ -13,5 +10,5 @@
 
 /*主页搜索框修改*/
 .main__search-box .van-search {
-    padding: 10px;
+    padding: 10px 10px 0;
 }

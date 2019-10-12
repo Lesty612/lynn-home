@@ -1,2 +1,24 @@
-<!--pages/order-list/filter-panel/filter-panel.wxml-->
-<view>pages/order-list/filter-panel/filter-panel.wxml</view>
+<view class="filter-panel__root">
+    <van-row gutter="10" class="filter-panel__tag-list">
+        <van-col class="filter-panel__sort-tag {{filterCondition === 'count' ? 'filter-panel__sort-tag__active' : ''}}"
+                 span="6"
+                 data-condition="count"
+                 bindtap="tapCondition">最多次数
+        </van-col>
+        <van-col class="filter-panel__sort-tag {{filterCondition === 'date' ? 'filter-panel__sort-tag__active' : ''}}"
+                 span="6"
+                 data-condition="date"
+                 bindtap="tapCondition">最新日期
+        </van-col>
+        <van-col class="filter-panel__sort-tag {{filterCondition === 'price' ? 'filter-panel__sort-tag__active' : ''}}"
+                 span="6"
+                 data-condition="price"
+                 bindtap="tapCondition">最高价格
+        </van-col>
+        <van-col class="filter-panel__sort-tag {{filterCondition === 'filter' ? 'filter-panel__sort-tag__active' : ''}}"
+                 span="6"
+                 data-condition="filter"
+                 bindtap="tapCondition">筛选
+        </van-col>
+    </van-row>
+</view>
