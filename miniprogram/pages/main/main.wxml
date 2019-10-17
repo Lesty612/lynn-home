@@ -2,7 +2,7 @@
     <search-panel class="main__search-box"></search-panel>
 
     <view class="main__content">
-        <van-sticky>
+        <van-sticky class="{{isFilterFixed ? 'main__filter-fixed' : ''}}" bind:scroll="handleStickyScroll">
             <filter-panel bind:condition-change="handleFilterConditionChange"></filter-panel>
         </van-sticky>
         <item-list></item-list>

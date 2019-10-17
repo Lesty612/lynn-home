@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/manage/manage",
+    "pages/apps/apps",
     "pages/my/my",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -28,8 +28,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/manage/manage",
-        "text": "图表"
+        "pagePath": "pages/apps/apps",
+        "text": "功能列表"
       },
       {
         "pagePath": "pages/my/my",

@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/apps/apps.js
 Component({
   /**
    * 组件的属性列表
@@ -21,7 +21,7 @@ Component({
       onShow() {
           // 设置tabbar选中
           this.getTabBar().setData({
-              curTabId: 'my'
+              curTabId: 'apps'
           });
       },
   }

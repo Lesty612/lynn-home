@@ -2,3 +2,8 @@
 .main__content {
     padding: 0 10px;
 }
+
+/*修复sticky布局吸顶后宽度失效的BUG*/
+.main__filter-fixed .van-sticky-wrap {
+    width: calc(100% - 20px);
+}
