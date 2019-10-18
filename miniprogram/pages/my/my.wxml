@@ -1,2 +1,24 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my__root">
+    <view class="my__header">
+        <view class="my__info-box">
+            <image class="my__avatar"
+                   src="{{avatarUrl}}"
+                   mode="aspectFit">
+            </image>
+            <!--根据是否登录展示不同信息-->
+            <view wx:if="{{nickName}}" class="my__info">
+                <view class="my__user-name">{{nickName}}</view>
+                <van-tag plain color="{{genderColor}}">{{genderDesc}}</van-tag>
+            </view>
+            <van-button wx:else
+                        type="primary"
+                        size="small"
+                        open-type="getUserInfo"
+                        bindgetuserinfo="handleGetUserInfo">登录/注册
+            </van-button>
+        </view>
+    </view>
+    <view class="my__setting-list">底部</view>
+
+    <van-toast id="van-toast"></van-toast>
+</view>

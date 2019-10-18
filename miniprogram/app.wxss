@@ -1,8 +1,4 @@
 /**app.wxss**/
-.app__content {
-    padding-bottom: 50px;
-}
-
 /*自定义tabbar图标大小*/
 .custom-tab-bar__item .van-icon {
     font-size: 23px;

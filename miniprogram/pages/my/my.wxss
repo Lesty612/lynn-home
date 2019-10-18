@@ -1,1 +1,38 @@
 /* pages/my/my.wxss */
+.my__root {
+
+}
+
+.my__header {
+    background: #c9eaff;
+}
+
+.my__info-box {
+    padding: 20px 0 20px 10px;
+}
+
+.my__info {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.my__avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    vertical-align: middle;
+    border-radius: 50%;
+
+    background: #fff;
+}
+
+.my__user-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.my__setting-list {
+    margin-top: 10px;
+}

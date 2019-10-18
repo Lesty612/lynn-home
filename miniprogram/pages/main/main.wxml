@@ -1,4 +1,4 @@
-<view class="app__content">
+<view class="main__root">
     <search-panel class="main__search-box"></search-panel>
 
     <view class="main__content">

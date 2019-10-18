@@ -1,6 +1,5 @@
-/* miniprogram/pages/order-list/order-list.wxss */
-.main__content {
-    padding: 0 10px;
+.main__root {
+    padding: 0 10px 50px;
 }
 
 /*修复sticky布局吸顶后宽度失效的BUG*/
