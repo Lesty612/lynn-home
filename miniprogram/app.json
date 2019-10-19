@@ -3,6 +3,8 @@
     "pages/main/main",
     "pages/apps/apps",
     "pages/my/my",
+    "pages/my/pages/about/about",
+    "pages/my/pages/feedback/feedback",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",

@@ -1,6 +1,11 @@
 /* pages/my/my.wxss */
-.my__root {
+page {
+    height: 100%;
+}
 
+.my__root {
+    height: 100%;
+    background: #fafafa;
 }
 
 .my__header {
@@ -33,6 +38,6 @@
     font-weight: bold;
 }
 
-.my__setting-list {
+.my__option-list {
     margin-top: 10px;
 }

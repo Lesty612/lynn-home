@@ -18,7 +18,10 @@
             </van-button>
         </view>
     </view>
-    <view class="my__setting-list">底部</view>
+
+    <view class="my__option-list">
+        <option-list></option-list>
+    </view>
 
     <van-toast id="van-toast"></van-toast>
 </view>

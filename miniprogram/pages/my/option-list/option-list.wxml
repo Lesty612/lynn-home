@@ -1,0 +1,11 @@
+<!--pages/my/option-list/option-list.wxml-->
+<van-cell title="关于我们"
+          is-link
+          link-type="navigateTo"
+          url="/pages/my/pages/about/about">
+</van-cell>
+<van-cell title="意见反馈"
+          is-link
+          link-type="navigateTo"
+          url="/pages/my/pages/feedback/feedback">
+</van-cell>

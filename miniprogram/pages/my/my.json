@@ -3,6 +3,7 @@
   "usingComponents": {
     "van-button": "vant-weapp/button",
     "van-tag": "vant-weapp/tag",
-    "van-toast": "vant-weapp/toast"
+    "van-toast": "vant-weapp/toast",
+    "option-list": "./option-list/option-list"
   }
 }

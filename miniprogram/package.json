@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Lesty612/lynn-home#readme",
   "dependencies": {
-    "vant-weapp": "^1.0.0-beta.0"
+    "vant-weapp": "1.0.0-beta.0"
   }
 }
