@@ -1,7 +1,13 @@
 {
   "pages": [
     "pages/main/main",
+
     "pages/apps/apps",
+    "pages/apps/pages/add-item/add-item",
+    "pages/apps/pages/channel-manage/channel-manage",
+    "pages/apps/pages/item-manage/item-manage",
+    "pages/apps/pages/tag-manage/tag-manage",
+
     "pages/my/my",
     "pages/my/pages/about/about",
     "pages/my/pages/feedback/feedback",

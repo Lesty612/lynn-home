@@ -1,2 +1,25 @@
 <!--pages/apps/apps.wxml-->
-<text>pages/apps/apps.wxml</text>
+<view class="apps__root">
+    <van-grid column-num="1">
+        <van-grid-item icon="add-o"
+                       link-type="navigateTo"
+                       url="/pages/apps/pages/add-item/add-item"
+                       text="新增物品">
+        </van-grid-item>
+        <van-grid-item icon="todo-list-o"
+                       link-type="navigateTo"
+                       url="/pages/apps/pages/item-manage/item-manage"
+                       text="物品管理">
+        </van-grid-item>
+        <van-grid-item icon="label-o"
+                       link-type="navigateTo"
+                       url="/pages/apps/pages/tag-manage/tag-manage"
+                       text="标签管理">
+        </van-grid-item>
+        <van-grid-item icon="cluster-o"
+                       link-type="navigateTo"
+                       url="/pages/apps/pages/channel-manage/channel-manage"
+                       text="渠道管理">
+        </van-grid-item>
+    </van-grid>
+</view>

@@ -2,7 +2,7 @@
     <!--这里需要active属性才能有选中效果-->
     <van-tabbar active="{{curTabId}}" bind:change="handleChange">
         <van-tabbar-item name="main"
-                         icon="wap-home-o"
+                         icon="home-o"
                          class="custom-tab-bar__item {{curTabId === 'main' ? 'custom-tab-bar__item__active' : ''}}">
         </van-tabbar-item>
         <van-tabbar-item name="apps"
