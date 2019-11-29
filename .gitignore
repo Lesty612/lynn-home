@@ -5,6 +5,7 @@
 # lib files
 miniprogram/node_modules/
 miniprogram/miniprogram_npm/
+cloudfunctions/*/node_modules/
 
 # Log files
 npm-debug.log

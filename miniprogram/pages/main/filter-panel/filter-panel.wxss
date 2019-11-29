@@ -1,7 +1,5 @@
 /* pages/order-list/filter-panel/filter-panel.wxss */
 .filter-panel__root {
-    min-width: 300px;
-
     background: #fff;
 }
 
