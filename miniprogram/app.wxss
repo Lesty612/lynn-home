@@ -4,7 +4,7 @@
     font-size: 23px;
 }
 
-/*主页搜索框修改*/
-.main__search-box .van-search {
-    padding: 10px 10px 0;
+/*修复弹框不在最左侧出现的BUG*/
+.notify-index--van-notify__container {
+    left: 0;
 }

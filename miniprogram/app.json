@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "van-notify": "vant-weapp/notify"
+  },
   "pages": [
     "pages/main/main",
 

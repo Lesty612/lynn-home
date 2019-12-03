@@ -24,4 +24,5 @@
     </view>
 
     <van-toast id="van-toast"></van-toast>
+    <van-notify id="van-notify"></van-notify>
 </view>

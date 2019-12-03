@@ -1,7 +1,9 @@
 import Toast from 'vant-weapp/toast/toast';
+import Notify  from 'vant-weapp/notify/notify';
 
 // pages/my/my.js
 const app = getApp();
+const db = wx.cloud.database();
 
 // 获取性别颜色
 function getGenderColor(gender) {
@@ -59,12 +61,37 @@ Component({
 
           // 拒绝授权
           if(!detail.userInfo) {
-              return Toast('您已取消登录授权，为了您的最优体验，请重新点击登录');
+              return Toast({
+                  message: '您已取消登录授权，为了您的最优体验，请重新点击登录',
+                  duration: 4000
+              });
           }
 
           const userInfo = detail.userInfo;
           app.globalData.userInfo = userInfo;
           this.setUserInfo(userInfo);
+
+          this.login({
+              time: +new Date(),
+              userName: userInfo.nickName
+          });
+      },
+      // 登录
+      login(params) {
+          wx.cloud.callFunction({
+              name: 'login',
+              data: params
+          }).then(res => {
+              console.log(res);
+          }).catch(err => {
+              if(err.errCode !== 0) {
+                  Notify({
+                      type: 'danger',
+                      message: err.errMsg,
+                      duration: 4000
+                  });
+              }
+          });
       },
       onLoad() {
           const userInfo = app.globalData.userInfo;

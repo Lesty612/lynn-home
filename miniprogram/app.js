@@ -5,14 +5,10 @@ App({
     },
 
     onLaunch: function () {
-        if (!wx.cloud) {
-            console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-        } else {
-            wx.cloud.init({
-                env: 'dev-364635',
-                traceUser: true
-            })
-        }
+        wx.cloud.init({
+            env: 'dev-364635',
+            traceUser: true
+        });
 
         // 获取用户当前授权设置
         wx.getSetting({
