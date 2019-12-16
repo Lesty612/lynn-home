@@ -16,15 +16,16 @@ const db = cloud.database();
  */
 exports.main = async ({time, userName}) => {
     try {
+        // 获取 WX Context (微信调用上下文)，包括 OPENID、APPID、及 UNIONID（需满足 UNIONID 获取条件）
+        const wxContext = cloud.getWXContext();
+
         const res = await db.collection('login-manage').add({
             data: {
+                _openid: wxContext.OPENID,
                 time: new Date(time),
                 userName
             }
         });
-
-        // 获取 WX Context (微信调用上下文)，包括 OPENID、APPID、及 UNIONID（需满足 UNIONID 获取条件）
-        const wxContext = cloud.getWXContext();
 
         return {
             code: 0,

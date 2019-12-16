@@ -1,2 +1,37 @@
-<!--pages/apps/pages/add-item/add-item.wxml-->
-<text>pages/apps/pages/add-item/add-item.wxml</text>
+<view class="add-item__root">
+    <van-cell-group title="基础信息">
+        <van-field value="{{formData.name}}"
+                   label="名称"
+                   clearable
+                   placeholder="请输入名称">
+        </van-field>
+        <van-field value="{{formData.name}}"
+                   label="价格"
+                   required
+                   clearable
+                   placeholder="请输入价格">
+        </van-field>
+        <van-cell title="类别" required is-link value="请选择类别"></van-cell>
+    </van-cell-group>
+
+    <van-cell-group title="还可以更精确">
+        <van-cell title="适宜季节" is-link value="请选择适宜季节"></van-cell>
+        <van-cell title="购买渠道" is-link value="请选择购买渠道"></van-cell>
+        <van-field value="{{ formData.name }}"
+                   type="textarea"
+                   label="名称"
+                   rows="3"
+                   autosize
+                   placeholder="请输入描述信息">
+        </van-field>
+    </van-cell-group>
+
+    <view class="add-item__operate-box">
+        <van-button type="info"
+                    block
+                    square>保存信息
+        </van-button>
+    </view>
+
+    <van-notify id="van-notify"></van-notify>
+</view>

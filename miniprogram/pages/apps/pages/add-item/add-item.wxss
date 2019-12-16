@@ -1,1 +1,4 @@
-/* pages/apps/pages/add-item/add-item.wxss */
+.add-item__operate-box {
+    margin-top: 10px;
+    padding: 0 10px;
+}
