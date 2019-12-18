@@ -1,3 +1,6 @@
+const app = getApp();
+const Tools = app.Tools;
+
 // pages/apps/pages/add-item/add-item.js
 Component({
     /**
@@ -23,5 +26,9 @@ Component({
     /**
      * 组件的方法列表
      */
-    methods: {}
+    methods: {
+        onShow() {
+            console.log(Tools);
+        }
+    }
 })
