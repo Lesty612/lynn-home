@@ -19,9 +19,8 @@
         <van-cell title="购买渠道" is-link value="请选择购买渠道"></van-cell>
         <van-field value="{{ formData.name }}"
                    type="textarea"
-                   label="名称"
-                   rows="3"
-                   autosize
+                   label="描述信息"
+                   class="add-item__textarea-box"
                    placeholder="请输入描述信息">
         </van-field>
     </van-cell-group>

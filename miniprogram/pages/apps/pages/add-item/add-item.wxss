@@ -2,3 +2,9 @@
     margin-top: 10px;
     padding: 0 10px;
 }
+
+/*修改placeholder距离顶部高度以及textarea高度*/
+.add-item__textarea-box .van-field__input--textarea {
+    top: 8px;
+    height: 3em;
+}
