@@ -11,7 +11,13 @@
                    clearable
                    placeholder="请输入价格">
         </van-field>
-        <van-cell title="类别" required is-link value="请选择类别"></van-cell>
+        <van-cell title="类别"
+                  required
+                  is-link
+                  value="{{formData.itemType}}"
+                  data-name="Type"
+                  bind:click="handCellClick">
+        </van-cell>
     </van-cell-group>
 
     <van-cell-group title="还可以更精确">
@@ -31,6 +37,17 @@
                     square>保存信息
         </van-button>
     </view>
+
+    <van-popup show="{{ isShowTypePopUp }}"
+               position="bottom"
+               bind:close="handPopUpClose">
+        <van-picker show-toolbar
+                    title=""
+                    columns="{{typeList}}"
+                    data-name="itemType"
+                    bind:confirm="handlePickerConfirm">
+        </van-picker>
+    </van-popup>
 
     <van-notify id="van-notify"></van-notify>
 </view>
