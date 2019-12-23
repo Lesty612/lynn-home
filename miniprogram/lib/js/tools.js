@@ -4,6 +4,20 @@
 * @desc [公用的工具类]
 * */
 
+// 防抖动
+function debounce(fn, delay) {
+    let timer;
+
+    return function () {
+        const args = arguments;
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            fn.apply(this, args);
+        }, delay);
+    };
+}
+
 // 一个什么都不干的咸鱼函数
 function doNothing() {}
 
@@ -61,6 +75,7 @@ function stringToDate(dateStr) {
 };
 
 export default {
+    debounce,
     doNothing,
     formatDate,
     stringToDate

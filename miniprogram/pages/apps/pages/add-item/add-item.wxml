@@ -23,12 +23,18 @@
     <van-cell-group title="还可以更精确">
         <van-cell title="适宜季节" is-link value="请选择适宜季节"></van-cell>
         <van-cell title="购买渠道" is-link value="请选择购买渠道"></van-cell>
-        <van-field value="{{ formData.name }}"
+        <van-field value="{{ formData.desc }}"
+                   wx:if="{{isHideTextarea === false}}"
                    type="textarea"
                    label="描述信息"
                    class="add-item__textarea-box"
-                   placeholder="请输入描述信息">
+                   placeholder="请输入描述信息"
+                   data-name="desc"
+                   bind:blur="handleFormChange">
         </van-field>
+        <van-cell wx:else title="描述信息" title-width="90px">
+            <view class="add-item__textarea-value">{{formData.desc}}</view>
+        </van-cell>
     </van-cell-group>
 
     <view class="add-item__operate-box">

@@ -5,6 +5,12 @@
 
 /*修改placeholder距离顶部高度以及textarea高度*/
 .add-item__textarea-box .van-field__input--textarea {
-    top: 8px;
     height: 3em;
+}
+
+.add-item__textarea-value {
+    height: 3em;
+
+    text-align: left;
+    color: #323233;
 }

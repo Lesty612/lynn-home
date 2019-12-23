@@ -1,3 +1,6 @@
+const app = getApp();
+const Tools = app.Tools;
+
 Component({
     /**
      * 组件的属性列表
@@ -31,10 +34,11 @@ Component({
         },
         // 处理sticky滚动
         handleStickyScroll(event) {
-            // TODO: 加个函数节流
-            this.setData({
-                isFilterFixed: event.detail.isFixed
-            });
+            Tools.debounce(() => {
+                this.setData({
+                    isFilterFixed: event.detail.isFixed
+                });
+            }, 200);
         }
     }
 })
