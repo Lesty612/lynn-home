@@ -3,21 +3,28 @@
         <van-field value="{{formData.name}}"
                    label="名称"
                    clearable
-                   placeholder="请输入名称">
+                   placeholder="请输入名称"
+                   data-name="name"
+                   bind:blur="handleFormChange">
         </van-field>
-        <van-field value="{{formData.name}}"
+        <van-field value="{{formData.price}}"
                    label="价格"
                    required
                    clearable
-                   placeholder="请输入价格">
+                   placeholder="请输入价格"
+                   error-message="{{errorMsgMap.price}}"
+                   data-name="price"
+                   bind:blur="handleFormChange">
         </van-field>
-        <van-cell title="类别"
-                  required
-                  is-link
-                  value="{{formData.itemType}}"
-                  data-name="Type"
-                  bind:click="handCellClick">
-        </van-cell>
+        <van-field label="类别"
+                   required
+                   disabled
+                   is-link
+                   value="{{formData.itemType}}"
+                   error-message="{{errorMsgMap.itemType}}"
+                   data-name="Type"
+                   bind:tap="handCellClick">
+        </van-field>
     </van-cell-group>
 
     <van-cell-group title="还可以更精确">
@@ -51,6 +58,7 @@
                     title=""
                     columns="{{typeList}}"
                     data-name="itemType"
+                    bind:cancel="handlePickerCancel"
                     bind:confirm="handlePickerConfirm">
         </van-picker>
     </van-popup>
