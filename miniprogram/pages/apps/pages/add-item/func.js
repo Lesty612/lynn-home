@@ -3,7 +3,11 @@ const validateMap = {
         return value !== '';
     },
     itemType(value) {
-        return value !== '';
+        if(value === '') {
+            return '请选择类别'
+        }
+
+        return '';
     },
     price(value) {
         if(value === '') {
@@ -17,7 +21,7 @@ const validateMap = {
 // 验证表单字段
 function validateField(key, value) {
     if(!(key in validateMap)) {
-        return;
+        return '';
     }
 
     return validateMap[key](value);

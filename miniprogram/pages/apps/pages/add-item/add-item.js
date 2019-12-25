@@ -49,36 +49,18 @@ Component({
         },
         // 处理表单值发送改变
         handleFormChange({currentTarget, detail}) {
-            const fieldName = currentTarget.dataset.name;
-            const value = detail.value;
-
-            // 值没改变则不做赋值操作
-            if(value === this.data.formData[fieldName]) {
-                return;
-            }
-
-            let data = {};
-            data[`formData.${fieldName}`] = value;
-            // 错误校验
-            data[`errorMsgMap.${fieldName}`] = validateField(fieldName, value);
-
-            console.log(this.data);
-            this.setData(data);
+            this.setFieldValue(currentTarget.dataset.name, detail.value);
         },
         // 处理picker取消选择
-        handlePickerCancel({currentTarget, detail}) {
+        handlePickerCancel({currentTarget}) {
+            this.setFieldValue(currentTarget.dataset.name, '');
             this.handPopUpClose();
         },
         // 处理picker确认
         handlePickerConfirm({currentTarget, detail}) {
             console.log(arguments);
-            const fieldName = currentTarget.dataset.name;
-            const value = detail.value;
 
-            let data = {};
-            data[`formData.${fieldName}`] = value;
-
-            this.setData(data);
+            this.setFieldValue(currentTarget.dataset.name, detail.value);
             this.handPopUpClose();
         },
         // 处理弹框关闭
@@ -92,6 +74,22 @@ Component({
         },
 
         onShow() {
-        }
+        },
+
+        // 设置表单字段值
+        setFieldValue(fieldName, value = '') {
+            // 值没改变则不做赋值操作
+            if(value === this.data.formData[fieldName]) {
+                return;
+            }
+
+            let data = {};
+            data[`formData.${fieldName}`] = value;
+            // 错误校验
+            data[`errorMsgMap.${fieldName}`] = validateField(fieldName, value);
+
+            console.log(this.data);
+            this.setData(data);
+        },
     }
 })

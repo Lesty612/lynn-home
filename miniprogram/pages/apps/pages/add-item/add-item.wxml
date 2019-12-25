@@ -16,11 +16,12 @@
                    data-name="price"
                    bind:blur="handleFormChange">
         </van-field>
-        <van-field label="类别"
+        <van-field value="{{formData.itemType}}"
+                   label="类别"
                    required
                    disabled
                    is-link
-                   value="{{formData.itemType}}"
+                   placeholder="请选择类别"
                    error-message="{{errorMsgMap.itemType}}"
                    data-name="Type"
                    bind:tap="handCellClick">
@@ -57,6 +58,7 @@
         <van-picker show-toolbar
                     title=""
                     columns="{{typeList}}"
+                    cancel-button-text="清空"
                     data-name="itemType"
                     bind:cancel="handlePickerCancel"
                     bind:confirm="handlePickerConfirm">
