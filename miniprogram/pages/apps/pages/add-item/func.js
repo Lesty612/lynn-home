@@ -1,7 +1,4 @@
 const validateMap = {
-    channel(value) {
-        return value !== '';
-    },
     itemType(value) {
         if(value === '') {
             return '请选择类别'

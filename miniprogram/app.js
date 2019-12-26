@@ -1,3 +1,4 @@
+import Enumerate from '/lib/data/enumerate.js';
 import Tools from '/lib/js/tools.js';
 
 //app.js
@@ -37,7 +38,8 @@ App({
         });
     },
 
+    Enumerate,
     Tools,
     // 获取用户信息回调
     userInfoReadyCallBack: null
-})
+});

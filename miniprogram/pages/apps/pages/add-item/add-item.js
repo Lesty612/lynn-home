@@ -1,8 +1,8 @@
 import {validateField} from './func.js';
 
 const app = getApp();
+const {CHANNEL_LIST, SEASON_LIST, TYPE_LIST} = app.Enumerate;
 const Tools = app.Tools;
-const TYPE_LIST = ['短袖', '长袖', '外套', '长裤', '短裤', '裙子', '卫衣', '其它'];
 // 表单属性对照表
 const formMap = {
     channel: '',
@@ -21,15 +21,29 @@ Component({
      * 组件的初始数据
      */
     data: {
+        // 渠道列表
+        channelList: CHANNEL_LIST,
         // 错误信息对照表
         errorMsgMap: Object.assign({}, formMap),
         formData: Object.assign({}, formMap),
-        // 是否隐藏textare
-        isHideTextarea: false,
-        // 是否展示类别弹出框
-        isShowTypePopUp: false,
+        // 是否展示弹出框
+        isShowPopUp: false,
+        isShowChannelPicker: false,
+        isShowSeasonPicker: false,
+        isShowTypePicker: false,
+        // 适宜季节列表
+        seasonList: SEASON_LIST,
         // 类别列表
         typeList: TYPE_LIST
+    },
+
+    observers: {
+        // 任意一个picker展示都显示弹出框
+        'isShowChannelPicker, isShowSeasonPicker, isShowTypePicker': function (isShowChannelPicker, isShowSeasonPicker, isShowTypePicker) {
+            this.setData({
+                isShowPopUp: isShowChannelPicker || isShowSeasonPicker || isShowTypePicker
+            });
+        }
     },
 
     /**
@@ -38,12 +52,10 @@ Component({
     methods: {
         // 处理cell点击
         handCellClick({currentTarget}) {
-            // popUp的时候隐藏textarea(层级太高)
             let data = {
-                isHideTextarea: true
             };
             curCellName = currentTarget.dataset.name;
-            data[`isShow${curCellName}PopUp`] = true;
+            data[`isShow${curCellName}Picker`] = true;
 
             this.setData(data);
         },
@@ -66,9 +78,8 @@ Component({
         // 处理弹框关闭
         handPopUpClose() {
             let data = {
-                isHideTextarea: false
             };
-            data[`isShow${curCellName}PopUp`] = false;
+            data[`isShow${curCellName}Picker`] = false;
 
             this.setData(data);
         },
